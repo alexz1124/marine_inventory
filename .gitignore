@@ -1,15 +1,5 @@
-# ไฟล์ environment
-.env
-
-# โฟลเดอร์ vendor
+/.env
 /vendor
-
-# ไฟล์การตั้งค่า IDE
-.idea/
-.vscode/
-
-# ไฟล์ log
-*.log
-
-# ไฟล์ cache
-/cache/
+/node_modules
+.idea
+.DS_Store

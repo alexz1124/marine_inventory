@@ -1,18 +1,16 @@
 <?php
 // เรียกใช้ autoload
-require_once DIR . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// ระบุโฟลเดอร์ที่มี .env (ไม่จำเป็นหากใช้ Railway Variables)
-if (file_exists(DIR . '/../.env')) {
-    $dotenv = Dotenv\Dotenv::createImmutable(DIR . '/../');
-    $dotenv->load();
-}
+// ระบุโฟลเดอร์ที่มี .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
-// ข้อมูลการเชื่อมต่อจาก Environment Variables
-$servername = getenv('DB_HOST') ?: 'localhost';
-$username = getenv('DB_USER') ?: 'root';
-$password = getenv('DB_PASS') ?: '';
-$dbname = getenv('DB_NAME') ?: 'inventory';
+// ข้อมูลการเชื่อมต่อจาก .env
+$servername = $_ENV['DB_HOST'];
+$username = $_ENV['DB_USER'];
+$password = $_ENV['DB_PASS'];
+$dbname = $_ENV['DB_NAME'];
 
 // เชื่อมต่อฐานข้อมูล
 $conn = new mysqli($servername, $username, $password, $dbname);
