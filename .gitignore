@@ -1,6 +1,3 @@
-# ไฟล์การตั้งค่าฐานข้อมูล
-db_connect.php
-
 # ไฟล์ environment
 .env
 
