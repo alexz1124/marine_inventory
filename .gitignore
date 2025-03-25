@@ -1,0 +1,18 @@
+# ไฟล์การตั้งค่าฐานข้อมูล
+db_connect.php
+
+# ไฟล์ environment
+.env
+
+# โฟลเดอร์ vendor
+/vendor
+
+# ไฟล์การตั้งค่า IDE
+.idea/
+.vscode/
+
+# ไฟล์ log
+*.log
+
+# ไฟล์ cache
+/cache/
